@@ -1,0 +1,113 @@
+.column {
+    width: 6vh;
+    height: 6vh;
+    margin: 0.2vh;
+    /* background-color: rgb(110, 173, 251); */
+    background-color: rgb(161, 208, 252);
+    border: 0.7vh rgb(55, 55, 249) solid;
+    border-radius: 50%/50%;
+    /* outline: rgb(12, 12, 75) 0.4vw solid; */
+    outline: white 0.2vh solid;
+    padding: 0.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6.3vh;
+}
+
+.row {
+    display: flex;
+}
+
+#grid {
+    border: 1.3vh darkblue double;
+    background-color: blue;
+    padding: 1vh;
+    width: 56vh;
+    height: 48vh;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(161, 208, 252);
+    margin: auto;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 7.7vh;
+    text-align: center;
+}
+
+#h1red {
+    color: red;
+    text-shadow: 0.2vh 0.2vh 0.1vh yellow, 0.4vh 0.4vh 0.1vh white;
+}
+
+#h1yellow {
+    color: yellow;
+    text-shadow: 0.2vh 0.2vh 0.1vh red, 0.4vh 0.4vh 0.1vh white;
+}
+
+#four {
+    color: yellow;
+    text-shadow: 0.2vh 0.2vh 0.1vh red, 0.4vh 0.4vh 0.1vh white;
+    border: red 2vh dotted;
+    border-radius: 50%/50%;
+    margin: 2vh;
+    padding-right: 2.4vh;
+    padding-bottom: 3.4vh;
+}
+
+#winner-display {
+    display: none;
+    font-size: 5vh;
+    color: white;
+    margin: 4vh;
+}
+
+#winner-name {
+    border: white dashed 0.2vh;
+    border-radius: 50%/50%;
+    font-size: 6vh;
+    padding: 2vh;
+    padding-bottom: 1.5vh;
+}
+
+#show-whose-turn {
+    font-size: 5vh;
+    color: white;
+}
+
+#whose-turn {
+    border: white dashed 0.2vh;
+    border-radius: 50%/50%;
+    font-size: 6vh;
+    padding: 2vh;
+    padding-bottom: 1.5vh;
+}
+
+#column-full {
+    display: none;
+}
+
+#reset-button { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.3vh;
+    text-justify: center;
+    padding: 1.2vh;
+    color: white;
+    background-color: red;
+    border: yellow 1vh double;
+    border-radius: 20%/50%;
+}
+
+#button {
+    padding: 0.8vh;
+}
+
+

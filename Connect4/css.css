@@ -1,0 +1,122 @@
+.column {
+    width: 7vw;
+    height: 7vw;
+    margin: 0.2vw;
+    /* background-color: rgb(110, 173, 251); */
+    background-color: rgb(161, 208, 252);
+    border: 0.7vw rgb(55, 55, 249) solid;
+    border-radius: 50%/50%;
+    /* outline: rgb(12, 12, 75) 0.4vw solid; */
+    outline: white 0.2vw solid;
+    padding: 0.1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+}
+
+.row {
+    width: 100vw;
+    margin: auto;
+    display: flex;
+}
+
+#grid {
+    border: 1.3vw darkblue double;
+    background-color: blue;
+    padding: 1.5vw;
+    width: 63vw;
+    margin: auto;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(161, 208, 252);
+    margin: auto;
+    padding-top: 12vw;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10vw;
+    text-align: center;
+}
+
+#h1red {
+    color: red;
+    text-shadow: 0.2vw 0.2vw 0.1vw yellow, 0.4vw 0.4vw 0.1vw white;
+}
+
+#h1yellow {
+    color: yellow;
+    text-shadow: 0.2vw 0.2vw 0.1vw red, 0.4vw 0.4vw 0.1vw white;
+}
+
+#four {
+    color: yellow;
+    text-shadow: 0.2vw 0.2vw 0.1vw red, 0.4vw 0.4vw 0.1vw white;
+    border: red 2vw dotted;
+    border-radius: 50%/50%;
+    margin: 3vw;
+    padding-right: 2.7vw;
+    padding-bottom: 3.7vw;
+    display: flexbox;
+    justify-content: flex-end;
+
+}
+
+#winner-display {
+    display: none;
+    text-align: center;
+    font-size: 7vw;
+    color: white;
+    margin: auto;
+    max-width: 70vw;
+    padding: 6vw;
+}
+
+#column-full {
+    display: none;
+}
+
+#reset-button { 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    text-justify: center;
+    padding: 2vw;
+    color: white;
+    background-color: red;
+    border: yellow 1vw double;
+    border-radius: 20%/50%;
+    min-width: 15vw;
+    min-height: 5vw;
+}
+
+#button {
+    padding: 2vw;
+    min-width: 6vw;
+    min-height: 6vw;
+}
+
+#show-whose-turn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6vw;
+    color: white;
+    padding-top: 0.1vw;
+}
+
+#whose-turn {
+    border: white dashed 0.2vw;
+    border-radius: 50%/50%;
+    font-size: 8vw;
+    padding: 2.2vw;
+    padding-bottom: 1.7vw;
+}
+
+#winner-name {
+    border: white dashed 0.2vw;
+    padding-bottom: 1.7vw;
+    padding: 2.2vw;
+    border-radius: 50%/50%;
+    font-size: 8vw;
+}
