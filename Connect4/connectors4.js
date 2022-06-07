@@ -11,6 +11,15 @@ function clearBoard() {
     }
 }
 
+const submitButton = document.getElementById("submit")
+
+function disableTextInput() {
+    document.getElementById("red-player").disabled = true
+    document.getElementById("yellow-player").disabled = true
+}
+
+submitButton.addEventListener("click", disableTextInput)
+
 // Populate the grid with images based on the board state.
 function drawBoard(board) {
     clearBoard();
@@ -49,6 +58,24 @@ function positionClick(rowIndex, columnIndex, event) {
         }
         const winnerName = document.getElementById("winner-name");   //document refers to the HTML
         winnerName.innerText = winner;
+
+
+        const redPlayer = document.getElementById("red-player").value
+        const redWinnerName = document.getElementById("red-player").value === "" ? "🔴": redPlayer
+
+        const yellowPlayer = document.getElementById("yellow-player").value
+        const yellowWinnerName = document.getElementById("yellow-player").value === "" ? "🟡" : yellowPlayer
+        
+        if (winner === "🔴") {
+            document.getElementById("winner-name").innerText = redWinnerName
+        }
+        else if (winner === "🟡") {
+            document.getElementById("winner-name").innerText = yellowWinnerName
+        }
+        else {
+            document.getElementById("winner-name").innerText = "Nobody"
+        }
+
         const winnerDisplay = document.getElementById("winner-display");
         winnerDisplay.style.display = "block";
         document.getElementById("show-whose-turn").style.display = "none"
@@ -64,6 +91,14 @@ function resetClick(event) {
     winnerDisplay.style.display = "None";        //hides the element
     document.getElementById("show-whose-turn").style.display = "block"
     clearBoard();
+
+    const redName = document.getElementById("red-player");
+    redName.value = "";
+    const yellowName = document.getElementById("yellow-player");
+    yellowName.value = "";
+    document.getElementById('red-player').disabled = false
+    document.getElementById('yellow-player').disabled = false
+
 }
 
 // Bind the click events for the grid.

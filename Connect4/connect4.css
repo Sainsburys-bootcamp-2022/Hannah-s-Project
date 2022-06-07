@@ -32,9 +32,10 @@ body {
     text-align: center;
     background-color: rgb(161, 208, 252);
     margin: auto;
-    padding-top: 3vh;
+    padding-top: 2.5vh;
     padding-bottom: 2vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
 }
 
 h1 {
@@ -95,6 +96,76 @@ h1 {
     display: none;
 }
 
+#players {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+label[for=red-player] {
+    color: red;
+    font-weight: bold;
+}
+
+#players {
+    font-size: 2.2vh;
+    margin: 0.5vh;
+}
+
+#red-player {
+    background-color: rgb(55, 55, 249);
+    margin: 0.5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5vh;
+    border: red 0.5vw solid;
+}
+
+#red-player::placeholder {
+    color: white;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+label[for=yellow-player] {
+    color: yellow;
+    font-weight: bold;
+    padding-left: 2vh;
+}
+
+#yellow-player {
+    background-color: rgb(55, 55, 249);
+    margin: 0.5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5vh;
+    border: yellow 0.5vw solid;
+}
+
+#yellow-player::placeholder {
+    color: white;
+    opacity: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+textarea:focus, input:focus {
+    color: white;
+}
+
+#submit {
+    background-color: white;
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.6vh;
+    padding: 0.5vh;
+    border: blue 0.6vh outset;
+    border-radius: 90%/50%;
+    margin: 1vh;
+}
+
 #reset-button { 
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.3vh;
@@ -107,7 +178,7 @@ h1 {
 }
 
 #button {
-    padding: 0.8vh;
+    margin: 2vh;
 }
 
 

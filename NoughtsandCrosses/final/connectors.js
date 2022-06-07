@@ -19,15 +19,25 @@ function clearBoard() {
     }  
 }
 
-function namesSubmitted() {
-    const noughtsPlayerName = document.getElementById("noughts-player").value
-    console.log(noughtsPlayerName)
-    const crossesPlayerName = document.getElementById("crosses-player").value 
-    console.log(crossesPlayerName) 
-}
+// function namesSubmitted() {
+//     const noughtsPlayerName = document.getElementById("noughts-player").value
+//     console.log(noughtsPlayerName)
+//     const crossesPlayerName = document.getElementById("crosses-player").value 
+//     console.log(crossesPlayerName) 
+// }
+
+// const submitButton = document.getElementById("submit")
+// submitButton.addEventListener("click", namesSubmitted)
+
 
 const submitButton = document.getElementById("submit")
-submitButton.addEventListener("click", namesSubmitted)
+
+function disableTextInput() {
+    document.getElementById("noughts-player").disabled = true
+    document.getElementById("crosses-player").disabled = true
+}
+
+submitButton.addEventListener("click", disableTextInput)
 
 
 // Populate the grid with images based on the board state.
@@ -98,12 +108,8 @@ function positionClick(rowIndex, columnIndex, event) {
             gameOver = true
         }
 
-// need to stop the winner from changing
-//need to get the name values to reset when reset button pressed
-
         const winnerDisplay = document.getElementById("winner-display");
         winnerDisplay.style.display = "block";
-
 
 
 //try an if statement where if there is text in the player name box, announce the winner by name, otherwise keeps noughts/crosses
@@ -126,6 +132,8 @@ function resetClick(event) {
     noughtsName.value = "";
     const crossesName = document.getElementById("crosses-player");
     crossesName.value = "";
+    document.getElementById("noughts-player").disabled = false
+    document.getElementById("crosses-player").disabled = false
 }
 
 // Bind the click events for the grid.
