@@ -9,6 +9,7 @@ function getNewBoard() {
 
 let noughtsTurn = true
 console.log("Noughts Turn")
+let gameOver = false
 
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
@@ -56,6 +57,8 @@ function checkWinner() {
     //return null;
   //  console.log(board[row][column])
 
+  // const noughtsPlayer = document.getElementById("noughts-player").innerText
+  // const crossesPlayer = document.getElementById("crosses-player").innerText
 
   //change this because need nobody as third option
   //draw (no winner) if 9 counters placed, use a counter - each time a play goes add 1 to the counter and when hits 9 becomes nobody
@@ -233,6 +236,7 @@ function resetGame() {
              [null, null, null], 
              [null, null, null]];
     noughtsTurn = true
+    gameOver = false
 }
 
 // Return the current board state with either a "nought" or a "cross" in

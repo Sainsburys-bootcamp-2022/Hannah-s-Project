@@ -111,7 +111,51 @@ p {font-size: medium;
 
 #players {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+}
+
+#noughts-player {
+    background-color: aquamarine;
+    margin: 1vw;
+    font-size: 3vw;
+    border: rgb(220, 250, 246) 1vw solid;
+}
+
+#noughts-player::placeholder {
+    color: deeppink;
+    opacity: 1;
+    font-style: italic;
+}
+
+#crosses-player {
+    background-color: aquamarine;
+    margin: 1vw;
+    font-size: 3vw;
+    border: rgb(220, 250, 246) 1vw solid;
+}
+
+#crosses-player::placeholder {
+    color: deeppink;
+    opacity: 1;
+    font-style: italic;
+}
+
+input, select, textarea{
+    color: rgb(251, 83, 173);
+}
+
+textarea:focus, input:focus {
+    color: deeppink;
+}
+
+#submit {
+    background-color: deeppink;
+    color: rgb(220, 250, 246) ;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin: 1.5vw;
+    padding: 0.8vw;
+    border-radius: 20%/50%;
+    border: aquamarine 0.5vw dotted;
 }
 
 #reset-button{ 

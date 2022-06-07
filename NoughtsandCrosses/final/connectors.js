@@ -16,9 +16,19 @@ function clearBoard() {
         for (let columnIndex = 0; columnIndex < 3; columnIndex++) {
             document.getElementById(`row-${rowIndex}-column-${columnIndex}`).innerHTML = ""
         }
-    }
-    
+    }  
 }
+
+function namesSubmitted() {
+    const noughtsPlayerName = document.getElementById("noughts-player").value
+    console.log(noughtsPlayerName)
+    const crossesPlayerName = document.getElementById("crosses-player").value 
+    console.log(crossesPlayerName) 
+}
+
+const submitButton = document.getElementById("submit")
+submitButton.addEventListener("click", namesSubmitted)
+
 
 // Populate the grid with images based on the board state.
 function drawBoard(board) {
@@ -54,14 +64,53 @@ function positionClick(rowIndex, columnIndex, event) {
     }
     drawBoard(board);
     const winner = checkWinner();
+
     if (winner) {
         if (typeof winner !== "string" || !["Noughts", "Crosses", "Nobody"].includes(winner)) {
             throw "Expecting 'checkWinner' to return null or one of the strings 'noughts', 'crosses' or 'nobody'. Actually received: " + winner;
         }
         const winnerName = document.getElementById("winner-name");
         winnerName.innerText = winner;
+
+
+
+        // const noughtsPlayer = document.getElementById("noughts-player").value  //noughtsPlayer = whatever was typed into noughts player name box an
+        // const noughtsWinnerPlayerName = winner === "Noughts" ? noughtsPlayer : "no"
+        // document.getElementById("winner-name").innerText = noughtsWinnerPlayerName
+        // console.log(noughtsWinnerPlayerName)
+
+        const noughtsPlayer = document.getElementById("noughts-player").value
+        const noughtsWinnerName = document.getElementById("noughts-player").value === "" ? "Noughts": noughtsPlayer
+
+        const crossesPlayer = document.getElementById("crosses-player").value
+        const crossesWinnerName = document.getElementById("crosses-player").value === "" ? "Crosses" : crossesPlayer
+        
+        if (winner === "Noughts") {
+            document.getElementById("winner-name").innerText = noughtsWinnerName
+            gameOver = true
+        }
+        else if (winner === "Crosses") {
+            document.getElementById("winner-name").innerText = crossesWinnerName
+            gameOver = true
+        }
+        else {
+            document.getElementById("winner-name").innerText = "Nobody"
+            gameOver = true
+        }
+
+// need to stop the winner from changing
+//need to get the name values to reset when reset button pressed
+
         const winnerDisplay = document.getElementById("winner-display");
         winnerDisplay.style.display = "block";
+
+
+
+//try an if statement where if there is text in the player name box, announce the winner by name, otherwise keeps noughts/crosses
+
+        // const cellText = board[rowIndex][columnIndex] === "nought" ? "⊘" : "✗";
+        // document.getElementById(`row-${rowIndex}-column-${columnIndex}`).innerText = cellText;
+       // document.getElementById("promotioncode").value == ""
     }
 }
 
@@ -73,6 +122,10 @@ function resetClick(event) {
     const winnerDisplay = document.getElementById("winner-display");
     winnerDisplay.style.display = "None";
     clearBoard();
+    const noughtsName = document.getElementById("noughts-player");
+    noughtsName.value = "";
+    const crossesName = document.getElementById("crosses-player");
+    crossesName.value = "";
 }
 
 // Bind the click events for the grid.
