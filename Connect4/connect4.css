@@ -1,6 +1,6 @@
 .column {
-    width: 6vh;
-    height: 6vh;
+    width: 4.8vh;
+    height: 4.8vh;
     margin: 0.2vh;
     /* background-color: rgb(110, 173, 251); */
     background-color: rgb(161, 208, 252);
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6.3vh;
+    font-size: 5.2vh;
 }
 
 .row {
@@ -20,20 +20,22 @@
 }
 
 #grid {
-    border: 1.3vh darkblue double;
+    border: 1vh darkblue double;
+    border-radius: 10% ;
     background-color: blue;
     padding: 1vh;
-    width: 56vh;
-    height: 48vh;
+    width: 47vh;
+    height: 41vh;
     margin: auto;
 }
 
 body {
     text-align: center;
     background-color: rgb(161, 208, 252);
+    /* background-color: rgba(102, 184, 252, 0.439); */
     margin: auto;
-    padding-top: 2.5vh;
-    padding-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
@@ -46,50 +48,56 @@ h1 {
 
 #h1red {
     color: red;
-    text-shadow: 0.2vh 0.2vh 0.1vh yellow, 0.4vh 0.4vh 0.1vh white;
+    text-shadow: 0.3vh 0.3vh 0.2vh yellow, 0.5vh 0.5vh 0.3vh white;
 }
 
 #h1yellow {
     color: yellow;
-    text-shadow: 0.2vh 0.2vh 0.1vh red, 0.4vh 0.4vh 0.1vh white;
+    text-shadow: 0.3vh 0.3vh 0.2vh red, 0.5vh 0.5vh 0.3vh white;
 }
 
 #four {
     color: yellow;
-    text-shadow: 0.2vh 0.2vh 0.1vh red, 0.4vh 0.4vh 0.1vh white;
-    border: red 2vh dotted;
+    text-shadow: 0.3vh 0.3vh 0.2vh red, 0.5vh 0.5vh 0.3vh white;
+    border: red 1.7vh dotted;
     border-radius: 50%/50%;
-    margin: 2vh;
-    padding-right: 2.4vh;
-    padding-bottom: 3.4vh;
+    margin: 1vh;
+    padding-right: 2.3vh;
+    padding-bottom: 3vh;
 }
 
 #winner-display {
     display: none;
-    font-size: 5vh;
+    font-size: 4vh;
+    letter-spacing: 0.5vh;
     color: white;
     margin: 4vh;
 }
 
 #winner-name {
-    border: white dashed 0.2vh;
+    border: darkblue dashed 0.2vh;
     border-radius: 50%/50%;
-    font-size: 6vh;
-    padding: 2vh;
-    padding-bottom: 1.5vh;
+    font-size: 5vh;
+    padding: 1.1vh;
+    padding-bottom: 1vh;
+    padding-top: 1.3vh;
+    padding-left: 1.6vh;
 }
 
 #show-whose-turn {
-    font-size: 5vh;
+    font-size: 4vh;
+    letter-spacing: 0.5vh;
     color: white;
 }
 
 #whose-turn {
-    border: white dashed 0.2vh;
+    border: darkblue dashed 0.2vh;
     border-radius: 50%/50%;
-    font-size: 6vh;
-    padding: 2vh;
-    padding-bottom: 1.5vh;
+    font-size: 5vh;
+    padding: 1.1vh;
+    padding-bottom: 1vh;
+    padding-top: 1.3vh;
+    padding-left: 1.6vh;
 }
 
 #column-full {
@@ -106,16 +114,18 @@ label[for=red-player] {
 }
 
 #players {
-    font-size: 2.2vh;
-    margin: 0.5vh;
+    font-size: 2.4vh;
+    margin: 0.8vh;
 }
 
 #red-player {
-    background-color: rgb(55, 55, 249);
+    background-color: rgba(9, 48, 244, 0.735);
     margin: 0.5vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5vh;
-    border: red 0.5vw solid;
+    font-size: 2.3vh;
+    border: red 0.6vh solid;
+    border-radius: 10%/50%;
+    text-align: center;
 }
 
 #red-player::placeholder {
@@ -132,11 +142,13 @@ label[for=yellow-player] {
 }
 
 #yellow-player {
-    background-color: rgb(55, 55, 249);
+    background-color: rgba(9, 48, 244, 0.735);
     margin: 0.5vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5vh;
-    border: yellow 0.5vw solid;
+    font-size: 2.3vh;
+    border: yellow 0.6vh solid;
+    border-radius: 10%/50%;
+    text-align: center;
 }
 
 #yellow-player::placeholder {
@@ -155,25 +167,27 @@ textarea:focus, input:focus {
 }
 
 #submit {
-    background-color: white;
-    color: darkblue;
+    background-color: rgba(0, 0, 139, 0.776);
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 1.6vh;
-    padding: 0.5vh;
-    border: blue 0.6vh outset;
-    border-radius: 90%/50%;
-    margin: 1vh;
+    font-size: 1.8vh;
+    letter-spacing: 0.4vh;
+    padding: 0.4vh;
+    padding-left: 0.9vh;
+    border: rgb(82, 127, 251) 0.5vh outset;
+    border-radius: 60%/15%;
+    margin: 0.5vh;
 }
 
 #reset-button { 
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.3vh;
+    font-size: 2vh;
+    font-weight: bold;
     text-justify: center;
     padding: 1.2vh;
     color: white;
     background-color: red;
-    border: yellow 1vh double;
+    border: yellow 0.8vh double;
     border-radius: 20%/50%;
 }
 
