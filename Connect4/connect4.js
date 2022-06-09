@@ -16,7 +16,6 @@ function getNewBoard() {
 
 let redsTurn = true
 console.log("Red's Turn")
-document.getElementById("whose-turn").innerText = "🔴"
 let winnerStatus = false
 console.log("no winner")
 
@@ -239,6 +238,14 @@ function getBoard() {
     return board
 }
 
+function isValidRowOrColumn(array) {
+    return Array.isArray(array) && array.length === 6;
+}
+
+function isValidColumn(columnArray) {
+    return isValidRowOrColumn(columnArray) && columnArray.every(function (item) { return ["red", "yellow", null].includes(item); });
+}
+
 if (typeof exports === 'object') {
     console.log("Running in Node")
     // Node. Does not work with strict CommonJS, but only CommonJS-like
@@ -248,6 +255,7 @@ if (typeof exports === 'object') {
         checkWinner,
         resetGame,
         getBoard,
+        isValidRowOrColumn
     }
 } else {
     console.log("Running in Browser")

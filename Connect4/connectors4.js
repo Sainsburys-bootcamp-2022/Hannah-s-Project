@@ -2,6 +2,8 @@
 // Validate academite functions are available
 const functions = ["takeTurn", "getBoard", "checkWinner", "resetGame"];
 
+document.getElementById("whose-turn").innerText = "🔴"
+
 // Clear down the elements drawn on the board.
 function clearBoard() {
     for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
@@ -33,14 +35,6 @@ function drawBoard(board) {
         }
     }
 }
-
-// function isValidRowOrColumn(array) {
-//     return Array.isArray(array) && array.length === 6;
-// }
-
-// function isValidColumn(columnArray) {
-//     return isValidRowOrColumn(columnArray) && columnArray.every(function (item) { return ["red", "yellow", null].includes(item); });
-// }
 
 // A grid position was clicked call the game's turn function, redraw and then check for a winner.
 function positionClick(rowIndex, columnIndex, event) {
@@ -109,26 +103,16 @@ for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
     }
 }
 
-
-
-
 //trying to get it to say a column is full if someone chooses a full column
-for (let j = 0; j < 7; j++) {
-    if (board[0][j] !== null && winnerStatus === false) {
-    console.log("column full")
-    const columnFull = document.getElementById("column-full")
-    columnFull.style.display = "block"
+// for (let j = 0; j < 7; j++) {
+//     if (board[0][j] !== null && winnerStatus === false) {
+//     console.log("column full")
+//     const columnFull = document.getElementById("column-full")
+//     columnFull.style.display = "block"
 
-    columnFull.addEventListener("click")
-    }
-}
-
-
-
-
-
-
-
+//     columnFull.addEventListener("click")
+//     }
+// }
 
 // Bind the click event for the reset button.
 const resetButton = document.getElementById("reset-button");
