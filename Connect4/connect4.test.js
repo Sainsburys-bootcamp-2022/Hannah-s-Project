@@ -5,14 +5,14 @@ describe('When invoking getBoard function', () => {
     it('returns original board state', () => {
         //ARRANGE
         const expectedResult = [
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-            ] 
-                  
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+        ]
+
         //ACT
         const result = getBoard.getBoard()
 
@@ -23,14 +23,14 @@ describe('When invoking getBoard function', () => {
     it('returns original board state', () => {
         //ARRANGE
         const expectedResult = [
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [null, null, null, null, null, null, null],
-             [x, null, null, null, null, null, null],
-            ] 
-                  
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null],
+            [x, null, null, null, null, null, null],
+        ]
+
         //ACT
         const result = getBoard.getBoard()
 
@@ -39,7 +39,7 @@ describe('When invoking getBoard function', () => {
     })
 })
 
- const isValidRowOrColumn = require('./connect4')
+const isValidRowOrColumn = require('./connect4')
 
 describe('When array length is 6', () => {
     it('returns true', () => {

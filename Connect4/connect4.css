@@ -1,6 +1,6 @@
 .column {
-    width: 4.8vh;
-    height: 4.8vh;
+    width: 4.9vh;
+    height: 4.9vh;
     margin: 0.2vh;
     /* background-color: rgb(110, 173, 251); */
     background-color: rgb(161, 208, 252);
@@ -8,11 +8,10 @@
     border-radius: 50%/50%;
     /* outline: rgb(12, 12, 75) 0.4vw solid; */
     outline: white 0.2vh solid;
-    padding: 0.1vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5.2vh;
+    font-size: 4.9vh;
 }
 
 .row {
@@ -21,7 +20,7 @@
 
 #grid {
     border: 1vh darkblue double;
-    border-radius: 10% ;
+    border-radius: 10%;
     background-color: blue;
     padding: 1vh;
     width: 47vh;
@@ -158,11 +157,14 @@ label[for=yellow-player] {
     font-style: italic;
 }
 
-input, select, textarea{
+input,
+select,
+textarea {
     color: white;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
     color: white;
 }
 
@@ -179,7 +181,7 @@ textarea:focus, input:focus {
     margin: 0.5vh;
 }
 
-#reset-button { 
+#reset-button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2vh;
     font-weight: bold;
@@ -194,5 +196,3 @@ textarea:focus, input:focus {
 #button {
     margin: 2vh;
 }
-
-
