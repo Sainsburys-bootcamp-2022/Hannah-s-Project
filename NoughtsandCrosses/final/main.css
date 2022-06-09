@@ -6,9 +6,12 @@
     width: 11vw;
     height: 11vw;
     margin: 2.5vw;
-    border: 3px dashed deeppink; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed deeppink;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
@@ -48,10 +51,10 @@
 
 body {
     text-align: center;
-      /*  background-color:rgb(220, 250, 246); */
-    background-color:aliceblue;
+    /*  background-color:rgb(220, 250, 246); */
+    background-color: aliceblue;
     color: deeppink;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 7px double aquamarine;
     outline: 10px double rgb(251, 83, 173);
     margin: 3%;
@@ -60,57 +63,78 @@ body {
     max-height: 100%;
 }
 
-h1 {color:deeppink;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+h1 {
+    color: deeppink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 10px;
     padding-bottom: 6% auto;
     text-shadow: 3px 3px 2px aquamarine, 4px 4px 2px deeppink;
     font-size: 6vw;
     text-align: center
-   /* text-transform: uppercase; */
+        /* text-transform: uppercase; */
 }
 
-p {font-size: medium;
+p {
+    font-size: medium;
 }
 
 #row-0-column-0 {
     color: aquamarine;
     background-color: deeppink;
-    border: 3px dashed aquamarine; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed aquamarine;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
 }
+
 #row-0-column-2 {
     color: aquamarine;
     background-color: deeppink;
-    border: 3px dashed aquamarine; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed aquamarine;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
 }
+
 #row-1-column-1 {
     color: aquamarine;
     background-color: deeppink;
-    border: 3px dashed aquamarine; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed aquamarine;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
 }
+
 #row-2-column-0 {
     color: aquamarine;
     background-color: deeppink;
-    border: 3px dashed aquamarine; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed aquamarine;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
 }
+
 #row-2-column-2 {
     color: aquamarine;
     background-color: deeppink;
-    border: 3px dashed aquamarine; /* inner border */
-    box-shadow: 2px 3px 5px 9px deeppink; /* outer 'border' */
-    outline: 4px solid rgb(220, 250, 246); /* fill */
+    border: 3px dashed aquamarine;
+    /* inner border */
+    box-shadow: 2px 3px 5px 9px deeppink;
+    /* outer 'border' */
+    outline: 4px solid rgb(220, 250, 246);
+    /* fill */
 }
 
 #players {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #noughts-player {
@@ -139,17 +163,20 @@ p {font-size: medium;
     font-style: italic;
 }
 
-input, select, textarea{
+input,
+select,
+textarea {
     color: rgb(251, 83, 173);
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
     color: deeppink;
 }
 
 #submit {
     background-color: deeppink;
-    color: rgb(220, 250, 246) ;
+    color: rgb(220, 250, 246);
     font-weight: bold;
     font-size: 2.5vw;
     margin: 1.5vw;
@@ -158,13 +185,13 @@ textarea:focus, input:focus {
     border: aquamarine 0.5vw dotted;
 }
 
-#reset-button{ 
+#reset-button {
     margin-top: 3%;
     max-width: 35%;
     max-height: 80%;
     background-color: deeppink;
     color: rgb(220, 250, 246);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: large;
     letter-spacing: 2mm;
@@ -172,6 +199,6 @@ textarea:focus, input:focus {
     text-justify: center;
     text-indent: 5%;
     padding: 1%;
-    border: aquamarine outset 5px;  
+    border: aquamarine outset 5px;
     border-radius: 70%/20%;
 }
