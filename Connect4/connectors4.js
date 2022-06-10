@@ -46,7 +46,6 @@ function positionClick(rowIndex, columnIndex, event) {
         const winnerName = document.getElementById("winner-name")
         winnerName.innerText = winner;
 
-
         const redPlayer = document.getElementById("red-player").value
         const redWinnerName = document.getElementById("red-player").value === "" ? "🔴" : redPlayer
 
@@ -84,7 +83,6 @@ function resetClick(event) {
     yellowName.value = ""
     document.getElementById('red-player').disabled = false
     document.getElementById('yellow-player').disabled = false
-
 }
 
 for (let rowIndex = 0; rowIndex < 6; rowIndex++) {

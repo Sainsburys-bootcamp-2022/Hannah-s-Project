@@ -29,17 +29,17 @@ function takeTurn(row, column) {
     }
     const currentSquare = board[row][column]
 
-    for (let i = 5; i >= 0; i--) {
-        if (board[i][column] === null && redsTurn === true) {
+    for (let row = 5; row >= 0; row--) {
+        if (board[row][column] === null && redsTurn === true) {
             //console.log("Red's Turn")
-            board[i][column] = "red"
+            board[row][column] = "red"
             redsTurn = false
             console.log(board)
             console.log("Yellow's Turn")
             document.getElementById("whose-turn").innerText = "🟡"
             break
-        } else if (board[i][column] === null && redsTurn === false) {
-            board[i][column] = "yellow"
+        } else if (board[row][column] === null && redsTurn === false) {
+            board[row][column] = "yellow"
             redsTurn = true
             document.getElementById("whose-turn").innerText = "🔴"
             console.log(board)
@@ -53,14 +53,14 @@ function checkWinner(board) {
     console.log("checkWinner was called")
 
     //Horizontal wins
-    for (let i = 5; i >= 0; i--) {
-        for (let j = 0; j < 4; j++) {
-            if (board[i][j] === "red" && board[i][j + 1] === "red" && board[i][j + 2] === "red" && board[i][j + 3] === "red") {
+    for (let row = 5; row >= 0; row--) {
+        for (let column = 0; column < 4; column++) {
+            if (board[row][column] === "red" && board[row][column + 1] === "red" && board[row][column + 2] === "red" && board[row][column + 3] === "red") {
                 console.log("red wins")
                 winnerStatus = true
                 return "🔴"
             }
-            else if (board[i][j] === "yellow" && board[i][j + 1] === "yellow" && board[i][j + 2] === "yellow" && board[i][j + 3] === "yellow") {
+            else if (board[row][column] === "yellow" && board[row][column + 1] === "yellow" && board[row][column + 2] === "yellow" && board[row][column + 3] === "yellow") {
                 console.log("yellow wins")
                 winnerStatus = true
                 return "🟡"
@@ -75,13 +75,13 @@ function checkWinner(board) {
     console.log(boardCopy)
 
     //Vertical wins
-    for (let j = 41; j >= 21; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 7] === "red" && boardCopy[j - 14] === "red" && boardCopy[j - 21] === "red") {
+    for (let column = 41; column >= 21; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 7] === "red" && boardCopy[column - 14] === "red" && boardCopy[column - 21] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 7] === "yellow" && boardCopy[j - 14] === "yellow" && boardCopy[j - 21] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 7] === "yellow" && boardCopy[column - 14] === "yellow" && boardCopy[column - 21] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -92,13 +92,13 @@ function checkWinner(board) {
     }
 
     //Diagonal wins L->R
-    for (let j = 38; j >= 35; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 6] === "red" && boardCopy[j - 12] === "red" && boardCopy[j - 18] === "red") {
+    for (let column = 38; column >= 35; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 6] === "red" && boardCopy[column - 12] === "red" && boardCopy[column - 18] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 6] === "yellow" && boardCopy[j - 12] === "yellow" && boardCopy[j - 18] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 6] === "yellow" && boardCopy[column - 12] === "yellow" && boardCopy[column - 18] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -108,12 +108,12 @@ function checkWinner(board) {
         }
     }
 
-    for (let j = 31; j >= 28; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 6] === "red" && boardCopy[j - 12] === "red" && boardCopy[j - 18] === "red") {
+    for (let column = 31; column >= 28; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 6] === "red" && boardCopy[column - 12] === "red" && boardCopy[column - 18] === "red") {
             console.log("red wins")
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 6] === "yellow" && boardCopy[j - 12] === "yellow" && boardCopy[j - 18] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 6] === "yellow" && boardCopy[column - 12] === "yellow" && boardCopy[column - 18] === "yellow") {
             console.log("yellow wins")
             return "🟡"
         }
@@ -122,13 +122,13 @@ function checkWinner(board) {
         }
     }
 
-    for (let j = 24; j >= 21; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 6] === "red" && boardCopy[j - 12] === "red" && boardCopy[j - 18] === "red") {
+    for (let column = 24; column >= 21; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 6] === "red" && boardCopy[column - 12] === "red" && boardCopy[column - 18] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 6] === "yellow" && boardCopy[j - 12] === "yellow" && boardCopy[j - 18] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 6] === "yellow" && boardCopy[column - 12] === "yellow" && boardCopy[column - 18] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -139,13 +139,13 @@ function checkWinner(board) {
     }
 
     //Diagonal wins R->L
-    for (let j = 41; j >= 38; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 8] === "red" && boardCopy[j - 16] === "red" && boardCopy[j - 24] === "red") {
+    for (let column = 41; column >= 38; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 8] === "red" && boardCopy[column - 16] === "red" && boardCopy[column - 24] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 8] === "yellow" && boardCopy[j - 16] === "yellow" && boardCopy[j - 24] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 8] === "yellow" && boardCopy[column - 16] === "yellow" && boardCopy[column - 24] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -155,13 +155,13 @@ function checkWinner(board) {
         }
     }
 
-    for (let j = 34; j >= 31; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 8] === "red" && boardCopy[j - 16] === "red" && boardCopy[j - 24] === "red") {
+    for (let column = 34; column >= 31; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 8] === "red" && boardCopy[column - 16] === "red" && boardCopy[column - 24] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 8] === "yellow" && boardCopy[j - 16] === "yellow" && boardCopy[j - 24] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 8] === "yellow" && boardCopy[column - 16] === "yellow" && boardCopy[column - 24] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -171,13 +171,13 @@ function checkWinner(board) {
         }
     }
 
-    for (let j = 27; j >= 24; j--) {
-        if (boardCopy[j] === "red" && boardCopy[j - 8] === "red" && boardCopy[j - 16] === "red" && boardCopy[j - 24] === "red") {
+    for (let column = 27; column >= 24; column--) {
+        if (boardCopy[column] === "red" && boardCopy[column - 8] === "red" && boardCopy[column - 16] === "red" && boardCopy[column - 24] === "red") {
             console.log("red wins")
             winnerStatus = true
             return "🔴"
         }
-        else if (boardCopy[j] === "yellow" && boardCopy[j - 8] === "yellow" && boardCopy[j - 16] === "yellow" && boardCopy[j - 24] === "yellow") {
+        else if (boardCopy[column] === "yellow" && boardCopy[column - 8] === "yellow" && boardCopy[column - 16] === "yellow" && boardCopy[column - 24] === "yellow") {
             console.log("yellow wins")
             winnerStatus = true
             return "🟡"
@@ -199,12 +199,14 @@ function checkWinner(board) {
 
 function resetGame() {
     console.log("resetGame was called")
-    board = [[null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null]]
+    board = [
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null]
+]
     winnerStatus = false
     redsTurn = true
     console.log("Red's Turn")
