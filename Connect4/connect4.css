@@ -20,9 +20,12 @@
 
 #grid {
     border: 1vh darkblue double;
-    border-radius: 10%;
+    border-radius: 20%;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
     background-color: blue;
-    padding: 1vh;
+    padding: 2vh;
+    padding-top: 3vh;
     width: 47vh;
     height: 43vh;
     margin: auto;

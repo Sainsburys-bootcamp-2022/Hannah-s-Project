@@ -1,5 +1,16 @@
 
-const functions = ["takeTurn", "getBoard", "checkWinner", "resetGame"]
+// function displayCounters() {
+// let redCounters = ["🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴", "🔴","🔴", "🔴", "🔴", "🔴", "🔴"]
+// // if() {
+//     redCounters.shift()
+// }
+    
+    
+// const redCountersCopy = [...redCounters].flat()
+// console.log(redCountersCopy)
+// document.getElementById("red-counters").innerText = redCountersCopy
+// }
+
 
 document.getElementById("whose-turn").innerText = "🔴"
 
@@ -28,30 +39,24 @@ function drawBoard(board) {
                 continue;
             }
             const cellText = board[rowIndex][columnIndex] === "red" ? "🔴" : "🟡";
-            document.getElementById(`row-${rowIndex}-column-${columnIndex}`).innerText = cellText;
+            document.getElementById(`row-${rowIndex}-column-${columnIndex}`).innerText = cellText
         }
     }
 }
 
-function positionClick(rowIndex, columnIndex, event) {
+function positionClick(rowIndex, columnIndex) {
     takeTurn(rowIndex, columnIndex)
     const board = getBoard()
 
     drawBoard(board);
     const winner = checkWinner(board)
     if (winner) {
-        if (typeof winner !== "string" || !["🔴", "🟡", "Nobody"].includes(winner)) {
-            throw "Expecting 'checkWinner' to return null or one of the strings 'red', 'yellow' or 'nobody'. Actually received: " + winner;
-        }
         const winnerName = document.getElementById("winner-name")
-        winnerName.innerText = winner;
-
+        winnerName.innerText = winner
         const redPlayer = document.getElementById("red-player").value
         const redWinnerName = document.getElementById("red-player").value === "" ? "🔴" : redPlayer
-
         const yellowPlayer = document.getElementById("yellow-player").value
         const yellowWinnerName = document.getElementById("yellow-player").value === "" ? "🟡" : yellowPlayer
-
         if (winner === "🔴") {
             document.getElementById("winner-name").innerText = redWinnerName
         }
@@ -61,14 +66,13 @@ function positionClick(rowIndex, columnIndex, event) {
         else {
             document.getElementById("winner-name").innerText = "Nobody"
         }
-
-        const winnerDisplay = document.getElementById("winner-display");
+        const winnerDisplay = document.getElementById("winner-display")
         winnerDisplay.style.display = "block"
         document.getElementById("show-whose-turn").style.display = "none"
     }
 }
 
-function resetClick(event) {
+function resetClick() {
     resetGame()
     const winnerName = document.getElementById("winner-name")
     winnerName.innerText = ""
@@ -76,7 +80,6 @@ function resetClick(event) {
     winnerDisplay.style.display = "None"
     document.getElementById("show-whose-turn").style.display = "block"
     clearBoard()
-
     const redName = document.getElementById("red-player")
     redName.value = ""
     const yellowName = document.getElementById("yellow-player")
@@ -99,6 +102,7 @@ if (typeof exports === 'object') {
     console.log("Running in Node")
     module.exports = {
         clearBoard,
+        disableTextInput,
         drawBoard,
         positionClick,
         resetClick,
