@@ -32,34 +32,38 @@ function checkWinner() {
     if (
       board[rowIndex][0] === "nought" && 
       board[rowIndex][1] === "nought" && 
-      board[rowIndex][2] === "nought") {
+      board[rowIndex][2] === "nought"
+      ) {
         gameOver = true
         return "Noughts"   
       }
     else if (
       board[rowIndex][0] === "cross" && 
       board[rowIndex][1] === "cross" && 
-      board[rowIndex][2] === "cross") {
+      board[rowIndex][2] === "cross"
+      ) {
         gameOver = true
         return "Crosses"
       }
   }
   //Vertical wins
   for (let columnIndex = 0; columnIndex < 3; columnIndex++) {
-      if (
-        board[0][columnIndex] === "nought" && 
-        board[1][columnIndex] === "nought" && 
-        board[2][columnIndex] === "nought") {
-          gameOver = true
-          return "Noughts"
-         }
+    if (
+      board[0][columnIndex] === "nought" && 
+      board[1][columnIndex] === "nought" && 
+      board[2][columnIndex] === "nought"
+      ) {
+        gameOver = true
+        return "Noughts"
+      }
        
-      else if (
-        board[0][columnIndex] === "cross" && 
-        board[1][columnIndex] === "cross" && 
-        board[2][columnIndex] === "cross") {
-          gameOver = true
-          return "Crosses"
+    else if (
+      board[0][columnIndex] === "cross" && 
+      board[1][columnIndex] === "cross" && 
+      board[2][columnIndex] === "cross"
+      ) {
+        gameOver = true
+        return "Crosses"
       }
   }
   //Diagonal wins
